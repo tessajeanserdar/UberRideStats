@@ -1,0 +1,22 @@
+{
+  "name": "ridestats.me",
+  "version": "1.0.0",
+  "description": "Simple Dashboard of users Uber History",
+  "main": "index.js",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "//github.com/tessajeanserdar/UberRideStats.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.1",
+    "lodash": "^4.12.0",
+    "mysql": "^2.10.2",
+    "node-uber": "^0.9.4",
+    "lodash": "^3.10.1"
+  },
+    "engines": {
+    "node": "5.0.0"
+  }
+}
