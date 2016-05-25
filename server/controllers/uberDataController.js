@@ -1,11 +1,17 @@
 const connection = require('../db.js');
 const uberMethods = require('../lib');
 const _ = require('lodash');
-const uber = uberMethods.UberInit();
+const config = require('../../config');
+const client_id = config.client_id;
+const client_secret = config.client_secret;
+const server_token = config.server_token;
+const uber = uberMethods.UberInit(client_id,client_secret,server_token);
 
+console.log(uber)
 module.exports = {
    logInUser : function(req, res) {
      var url = uber.getAuthorizeUrl(['history','profile', 'request', 'places']);
+     console.log(url);
      res.send(url);
    },
    authenticateUser : function(req, res) {
