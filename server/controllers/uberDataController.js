@@ -10,7 +10,6 @@ const uber = uberMethods.UberInit(client_id,client_secret,server_token);
 module.exports = {
    logInUser : function(req, res) {
      var url = uber.getAuthorizeUrl(['history','profile', 'request', 'places']);
-     console.log(url);
      res.send(url);
    },
    authenticateUser : function(req, res) {
@@ -54,7 +53,6 @@ module.exports = {
                    throw err;
                  } else {
                    userData.productHistory = userProductHistory;
-                   console.log(userData);
                    res.send(userData);
                  }
               });
