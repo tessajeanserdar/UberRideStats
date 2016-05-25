@@ -1,10 +1,27 @@
 <div class="jumbotron text-center">
-    <br>
-    {{userData.total_rides}}
-    <br>
-    {{userData.total_distance}}
-    <br>
-    {{userData.total_hours_ride}}
-    <br>
-    {{userData.total_hours_wait}}
+  <div class="main-total">
+    <h1 class="totals-header"> Check out your history, {{userData.userOverview[0].username}}
+    <p>
+      Rides Taken
+      {{userData.userOverview[0].total_rides}}
+    </p>
+    <p>
+      <br>
+      Total Distance
+      {{userData.userOverview[0].total_distance}}
+    </p>
+    <p>
+      <br>
+      Time Spent
+      {{userData.userOverview[0].total_hours_ride}}
+    </p>
+    <p>
+      <br>
+      Wait Time
+      {{userData.userOverview[0].total_hours_wait}}
+    </p>
+ </div>
+ <div class="main-product-breakdown">
+  Product Breakdown here 
+ </div>
 </div>

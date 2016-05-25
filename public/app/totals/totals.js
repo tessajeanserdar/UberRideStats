@@ -8,8 +8,7 @@ angular.module('main.totals',[])
 
   fetchUserData.getUsersData()
   .then(function(data){
-     var userInfo = data[0]
-     $scope.userData = userInfo;
+     $scope.userData = data;
   })
 
 
