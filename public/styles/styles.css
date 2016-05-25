@@ -48,3 +48,41 @@ p {
   font-weight: 400;
   line-height: 20px;
 }
+
+h1.totals-header {
+  font-family: Lato;
+  font-size: 12px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+}
+
+
+.jumbotron.totals {
+  font: Lato;
+  background-color: rgba(6, 28, 32,0.5);
+  color: white;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 5% ;
+  border: none;
+}
+
+.main-total {
+  font-size:22px;
+}
+
+#username-welcome.totals-header {
+  font-size: 44px;
+  color: rgb(240,255,255);
+}
+
+.description-totals {
+  color: rgb(240,255,255);
+}
+
+.data-point-main {
+  font-size: 32px;
+  font-weight: 800;
+}

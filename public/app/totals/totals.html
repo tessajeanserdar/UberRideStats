@@ -1,27 +1,32 @@
-<div class="jumbotron text-center">
+<div class="jumbotron text-center totals">
+  <h1 id="username-welcome" class="totals-header"> Check out your history, <br>
+    {{userData.userOverview[0].username}} !
+  </h1>
   <div class="main-total">
-    <h1 class="totals-header"> Check out your history, {{userData.userOverview[0].username}}
     <p>
-      Rides Taken
-      {{userData.userOverview[0].total_rides}}
+      <div class="data-point-main">{{userData.userOverview[0].total_rides}}</div>
+      <div class="description-totals" >Rides Taken</div>
     </p>
     <p>
       <br>
-      Total Distance
-      {{userData.userOverview[0].total_distance}}
+      <div class="data-point-main">{{userData.userOverview[0].total_distance.toFixed(0)}} miles</div>
+      <div class="description-totals">Total Distance</div>
     </p>
     <p>
       <br>
-      Time Spent
-      {{userData.userOverview[0].total_hours_ride}}
+      <div class="data-point-main">{{userData.userOverview[0].total_hours_ride.toFixed(2)}} days</div>
+      <div class="description-totals">Time Spent</div>
     </p>
     <p>
       <br>
-      Wait Time
-      {{userData.userOverview[0].total_hours_wait}}
+      <div class="data-point-main">{{userData.userOverview[0].total_hours_wait.toFixed(2)}} days</div>
+      <div class="description-totals">Wait Time</div>
     </p>
  </div>
  <div class="main-product-breakdown">
   Product Breakdown here 
+  <div>
+    {{userData.productHistory}}
+  </div>
  </div>
 </div>
