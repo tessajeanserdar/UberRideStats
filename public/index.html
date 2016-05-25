@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html ng-app="main">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ridestats</title>
-  </head>
-  <body>
-    <div class="container">
-      <ui-view><ui-view>
-    </div>
-  </body>
+<html>
+<head>
 
-  <!-- libraries -->
-  <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="lib/angular/angular.min.js"></script>
-  <script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <style>
+    </style>
 
-  <!-- app files -->
-  <script src="app/main/main.js"></script>
-  <script src="app/app.js"></script>
-  
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="app/totals/totals.js"></script>
+    <script src="app/welcomelogin/welcomelogin.js"></script>
+    <script src="app/services.js"></script>
+    <script src="app/app.js"></script>
+</head>
+
+<body ng-app="main">
+
+<div class="container">
+
+    <div ui-view></div>
+
+</div>
+
+</body>
 </html>
+
+
+<!--     // <script src="/socket.io/socket.io.js"></script>      
+ -->

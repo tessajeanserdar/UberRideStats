@@ -1,13 +1,19 @@
-angular.module('main', [
-  'ui.router',
-  'main.main'
-])
-.config(function ($stateProvider, $urlRouterProvider) {
- $urlRouterProvider.otherwise("/main");
- $stateProvider
-   .state('main', {
-     url: "/main",
-     templateUrl: "/app/main/main.html",
-     controller: 'MainController'
-   })
+const app = angular.module('main', ['ui.router','main.welcomelogin','main.services','main.totals']);
+
+app.config(function($stateProvider, $urlRouterProvider) {
+    
+    $urlRouterProvider.otherwise('/');
+    
+    $stateProvider
+        .state('home', {
+            url: '/',
+            templateUrl: '/app/welcomelogin/welcomelogin.html',
+            controller: 'welcomeloginController'
+        })
+        .state('totals', {
+            url: '/totals',
+            templateUrl: '/app/totals/totals.html',
+            controller: 'totalController'      
+        });
+        
 });
