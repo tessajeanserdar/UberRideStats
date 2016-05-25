@@ -1,0 +1,50 @@
+body {
+  background: url('../assets/cityday.jpeg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  background: inherit;
+}
+.jumbotron {
+  font: Lato;
+  background-color: rgba(6, 28, 32,0.5);
+  color: white;
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 15% ;
+  border: none;
+}
+
+.btn.btn-default {
+    border: none;
+    margin-top: 5%;
+}
+
+h1 {
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+}
+h3 {
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 15.4px;
+}
+p {
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
