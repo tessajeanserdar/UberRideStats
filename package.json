@@ -8,6 +8,9 @@
     "type": "git",
     "url": "//github.com/tessajeanserdar/UberRideStats.git"
   },
+  "scripts" : {
+    "start" : "node server/server.js"
+  },
   "license": "ISC",
   "dependencies": {
     "coffee-script": "^1.10.0",
