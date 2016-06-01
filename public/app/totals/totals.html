@@ -8,25 +8,25 @@
       <div class="description-totals" >Rides Taken</div>
     </p>
     <p>
-      <br>
       <div class="data-point-main">{{userData.userOverview[0].total_distance.toFixed(0)}} miles</div>
       <div class="description-totals">Total Distance</div>
     </p>
     <p>
-      <br>
       <div class="data-point-main">{{userData.userOverview[0].total_hours_ride.toFixed(2)}} days</div>
       <div class="description-totals">Time Spent</div>
     </p>
     <p>
-      <br>
       <div class="data-point-main">{{userData.userOverview[0].total_hours_wait.toFixed(2)}} days</div>
       <div class="description-totals">Wait Time</div>
     </p>
  </div>
- <div class="main-product-breakdown">
-  Product Breakdown here 
-  <div>
-    {{userData.productHistory}}
-  </div>
- </div>
+   <hr></hr>
+    <div ng-repeat="productSummary in userData.productHistory | orderBy : productSummary.total_rides ">
+             <img class="product-thumbnail" src="{{productSummary.image}}" alt="Smiley face" height="42" width="42">
+             <div class="description-totals-product-title"> {{productSummary.name}} </div>
+             <div class="data-point-main-product"> {{productSummary.total_rides}} RIDES </div>
+             <div class="data-point-main-product">  {{productSummary.total_distance.toFixed(2)}} MILES </div>
+             <div class="data-point-main-product"> {{(productSummary.total_hours_ride*24).toFixed(0)}} HOURS </div>
+    </div>
+  </p>
 </div>

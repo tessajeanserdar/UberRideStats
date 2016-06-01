@@ -5,6 +5,9 @@ const config = require('../../config');
 const client_id = config.client_id;
 const client_secret = config.client_secret;
 const server_token = config.server_token;
+const pusherAppId = config.appId;
+const pusherKey = config.pusherKey;
+const pusherSecret = config.pusherSecret;
 const uber = uberMethods.UberInit(client_id,client_secret,server_token);
 const Pusher = require('pusher');
   
@@ -28,9 +31,9 @@ module.exports = {
     var currentUser;
 
     const pusher = new Pusher({
-      appId: '212148',
-      key: '31c524eb992e076041b4',
-      secret: 'dfee773fa15d1f87ece8',
+      appId: pusherAppId,
+      key: pusherKey,
+      secret: pusherSecret,
       encrypted: true
     });
 
@@ -50,10 +53,10 @@ module.exports = {
       }
     });
 
-    function writeDatatoCSV(error, response) {
+    function writeDatatoMySQL(error, response) {
       var wroteSoFar = response.offset + response.limit;
 
-      if (response.offset + response.limit >= 200) {
+      if (response.offset + response.limit >= response.count + response.limit) {
          var userData = {}
          var sql = "select username,count(request_id) as total_rides,sum(distance) as total_distance,sum((end_time-start_time)/60/60/24) as total_hours_ride,sum((start_time-request_time)/60/60/24) as total_hours_wait from ridestats where username =? group by 1;"
          connection.query(sql, [currentUser.username], function(err,userMainHistory) {
@@ -109,7 +112,7 @@ module.exports = {
                   throw err;
                 } else {
                   userData.productHistory = userProductHistory;
-                  console.log(userData)
+                  console.log("data sending")
                   pusher.trigger('test_channel', 'my_event', {
                     "message": userData
                   });
@@ -119,7 +122,7 @@ module.exports = {
         });
 
         process.nextTick(function(){
-          fetchData(response.offset+response.limit,response.limit,writeDatatoCSV)
+          fetchData(response.offset+response.limit,response.limit,writeDatatoMySQL)
         })
       }      
     }
@@ -132,6 +135,6 @@ module.exports = {
         } 
       });
     };
-    fetchData(0,50,writeDatatoCSV);
+    fetchData(0,50,writeDatatoMySQL);
   }
 }

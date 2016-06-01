@@ -1,4 +1,4 @@
-const app = angular.module('main', ['ui.router','main.welcomelogin','main.services','main.totals']);
+const app = angular.module('main', ['ui.router','main.welcomelogin','main.services','main.totals','pusher-angular']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
     
