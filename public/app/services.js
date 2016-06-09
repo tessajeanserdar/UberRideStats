@@ -3,7 +3,7 @@ angular.module('main.services', [])
   const authenticateUser = function(){
     return $http({
       method: 'GET',
-      url: '/api/login'
+      url: '/v1/login'
     })
     .then(function (resp) {
       return resp.data
@@ -14,7 +14,7 @@ angular.module('main.services', [])
   const getUsersData = function () {
     return $http({
       method: 'GET',
-      url: '/api/history',
+      url: '/v1/history',
     })
     .then(function (resp) {
       return resp.data;

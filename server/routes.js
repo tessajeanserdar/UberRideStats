@@ -1,7 +1,6 @@
-var uberController = require ('./controllers/uberDataController');
-
+const uberController = require ('./controllers/uberDataController');
 module.exports = function(app, express){
-  app.get('/api/login', uberController.logInUser);
-  app.get('/api/callback', uberController.authenticateUser);
-  app.get('/api/history',uberController.getUserHistory);
+  app.get('/v1/login', uberController.logInUser);
+  app.get('/v1/callback', uberController.authenticateUser);
+  app.get('/v1/history',uberController.getUserHistory);
 }
