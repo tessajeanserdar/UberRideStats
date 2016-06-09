@@ -15,7 +15,7 @@ Next navigate to the root of the repository and run an npm install.  (if you don
 npm install
 ```
 
-You will need to get both Uber API and Pusher keys. Once you have those you can create your own config.js file in your root directory which required by uberDataController.js. Here is on way you could set up your config.js.
+You will need to get both Uber API and Pusher keys. Once you have those you can create your own config.js file in your root directory which is required by uberDataController.js. Here is one way you could set up your config.js.
 
 ```
 const config = {};
