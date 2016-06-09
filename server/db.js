@@ -15,19 +15,5 @@ con.connect(function(err){
   }
 });
 
-// create table IF NOT EXISTS ridestats (
-//    username VARCHAR(100) NOT NULL,
-//    rider_id VARCHAR(250) NOT NULL,
-//    distance FLOAT,
-//    request_time INT,
-//    start_time INT,
-//    latitude FLOAT,
-//    city VARCHAR(100),
-//    longitude FLOAT,
-//    end_time INT,
-//    request_id VARCHAR(250),
-//    product_id VARCHAR(250),
-//    PRIMARY KEY (request_id)
-// );
 
 module.exports = con;
